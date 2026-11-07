@@ -5,12 +5,10 @@ const regd_users = express.Router();
 
 let users = [];
 
-//returns boolean
 const isValid = (username) => {
   return users.some((user) => user.username === username);
 };
 
-//returns boolean
 const authenticatedUser = (username, password) => {
   return users.some(
     (user) => user.username === username && user.password === password
